@@ -1,0 +1,14 @@
+type Query {
+  me(epoch: Int): User!
+}
+
+type User {
+  id: ID!
+  marker: Int!
+  profile: Profile!
+}
+
+type Profile {
+  id: ID!
+  label: String!
+}

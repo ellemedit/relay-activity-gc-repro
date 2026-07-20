@@ -1,0 +1,28 @@
+{
+  "name": "relay-activity-gc-repro",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@11.15.1",
+  "scripts": {
+    "dev": "next dev",
+    "relay": "relay-compiler",
+    "build": "pnpm relay && next build",
+    "test": "pnpm build && playwright test",
+    "repro": "pnpm build && playwright test --grep \"reproduces PJM-1564\""
+  },
+  "dependencies": {
+    "next": "16.2.9",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "react-relay": "21.0.1",
+    "relay-runtime": "21.0.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.61.1",
+    "@types/node": "24.0.15",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "relay-compiler": "21.0.1",
+    "typescript": "5.9.3"
+  }
+}
